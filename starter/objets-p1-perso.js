@@ -24,7 +24,7 @@ const aurora = {
   force: 25,
   xp: 0,
   decrire(){
-    return `${aurora.nom} a ${aurora.sante} points de vie, ${aurora.force} en force et ${aurora.xp} points d'expérience`
+    return `${this.nom} a ${this.sante} points de vie, ${this.force} en force et ${this.xp} points d'expérience`
   }
 }
 console.log(aurora.decrire());
