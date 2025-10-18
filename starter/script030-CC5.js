@@ -40,3 +40,84 @@ du tableau (c'est comme cela qu'on calcule une moyenne).
 
 BONNE CHANCE 😀
 */
+
+const bourboire =  {
+    factures : [124, 48, 268, 180, 42],
+    pourboire:0,
+    montantFinauxTab : [],
+    pourBoireTap: [],
+    init(){
+        console.log("test")
+        this.calculeBouboire()
+    },
+
+     calculeBouboire(){
+         this.pourboire = 0;
+         this.factures.forEach(facture => {
+             console.log(facture)
+             if (facture <50){
+                 this.pourBoire = this.pourBoire+(facture*0.20);
+                 this.montantFinauxTab.push(facture+(facture*0.20));
+                 this.pourBoireTap.push(facture*0.20);
+             }
+             else if ((facture >=50)|| (facture<200)){
+                 this.pourBoire = this.pourBoire+(facture*0.15);
+                 this.montantFinauxTab.push(facture+(facture*0.15));
+                 this.pourBoireTap.push(facture*0.15);
+             }
+             else {
+                 this.pourBoire = this.pourBoire+(facture*0.10);
+                 this.montantFinauxTab.push(facture+(facture*0.10));
+                 this.pourBoireTap.push(facture*0.10);
+             }
+         });
+     },
+    affiche(){
+        for (let i = 0; i<this.factures.length; i++){
+            let pourbouires = Math.round((this.montantFinauxTab[i]-this.factures[i]) * 100) / 100;
+            console.log(`factures ${i + 1} et le  montant factures = ${this.factures[i]} et le montant finalal ${this.montantFinauxTab[i]} soit un pourboires de ${pourbouires}`);
+        }
+    }
+}
+bourboire.init();
+bourboire.affiche();
+
+
+/*
+const calculateurPourboire = {
+     factures : [124, 48, 268, 180, 42],
+    pourBoire: 0,
+    montantFinauxTab : [],
+    pourBoireTap: [],
+    caluclPourBoir(){
+         this.pourBoire = 0;
+         this.factures.forEach(facture => {
+             console.log(facture)
+             if (facture <50){
+                 this.pourBoire = this.pourBoire+(facture*0.20);
+                 this.montantFinauxTab.push(facture+(facture*0.20));
+                 this.pourBoireTap.push(facture*0.20);
+             }
+             else if (facture<200){
+                 this.pourBoire = this.pourBoire+(facture*0.15);
+                 this.montantFinauxTab.push(facture+(facture*0.15));
+                 this.pourBoireTap.push(facture*0.15);
+             }
+             else {
+                 this.pourBoire = this.pourBoire+(facture*0.10);
+                 this.montantFinauxTab.push(facture+(facture*0.10));
+                 this.pourBoireTap.push(facture*0.10);
+             }
+         });
+    },
+    affiche(){
+      for (let i = 0; i<this.factures.length; i++){
+          let pourbouires = Math.round((this.montantFinauxTab[i]-this.factures[i]) * 100) / 100;
+          console.log(`factures ${i + 1} et le  montant factures = ${this.factures[i]} et le montant finalal ${this.montantFinauxTab[i]} soit un pourboires de ${pourbouires}`);
+      }
+    }
+};
+
+calculateurPourboire.affiche();
+
+ */

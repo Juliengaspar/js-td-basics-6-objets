@@ -19,21 +19,38 @@ Aurora s'apprête à vivre une longue série d'aventures, dont certaines pourron
 11. Réaffiche la description d'aurora
 */
 const aurora = {
-  nom : 'aurora',
+  nom : 'Aurora',
   sante: 150,
   force: 25,
   xp: 0,
+  //version 2
   decrire(){
+    //pour appeler qqch d'an l'objet courant on vas faire ceci avec un this === pointeur courant vers l'objet courant dans le quelle je me trouev ici this= aurora
     return `${this.nom} a ${this.sante} points de vie, ${this.force} en force et ${this.xp} points d'expérience`
-  }
+  },
 }
+/*
+version1
+//mes fonction
+function decrire(p) {
+  console.log(`${p.nom} a ${p.sante} points de vie, ${p.force} en force et ${p.xp} points d'expérience`)
+
+}
+au
+decrire(aurora);
+ */
+aurora.decrire();
+
+
+console.log(aurora.nom);//operanter/2operantes/operation/expresion/valeurs vaux qqch cet avantage il vas nous dire des que il ya une erreurs
+console.log(aurora['nom']);//autre façon de le faire aleurs vaux qqch //mois d'aide donc plus facile a faires des erreurs
 console.log(aurora.decrire());
 console.log("Aurora apprend une nouvelle compétence");
-aurora.xp = aurora.xp + 15;
+aurora.xp +=  15;
 console.log(aurora.decrire());
 console.log("Aurora est blessée par une flèche");
-aurora.sante = aurora.sante - 20;
+aurora.sante -=  20;
 console.log(aurora.decrire());
 console.log("Aurora trouve un bracelet de force");
-aurora.force = aurora.force - 10;
+aurora.force -=  10;
 console.log(aurora.decrire());
