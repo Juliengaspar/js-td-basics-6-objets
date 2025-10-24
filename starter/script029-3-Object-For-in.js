@@ -14,9 +14,6 @@ for(const prop in objet) {
 EXERCICE 1 : 
 Parcours l'objet mesFruits pour afficher, pour chacun des fruits, "Le fruit … coûte … €"
 */
-//boucle forin pour voir tous les propreiters
-//const toto = [] tableaux indice car il n'y a pas di'ndi
-console.log('forin')
 const mesFruits = {
   "Pomme": 1.3,
   "Poire": 0.5,
@@ -24,10 +21,7 @@ const mesFruits = {
 };
 
 // Écris ton code ici
-//attention aux nom des constantes
-//"Pomme" === Pomme
 for (const mesFruitsKey in mesFruits) {
-  console.log(mesFruits[mesFruitsKey]);
   console.log(`Le fruit ${mesFruitsKey} coûte ${mesFruits[mesFruitsKey]} €`)
 }
 console.log("forin obj2")
@@ -35,7 +29,7 @@ console.log("forin obj2")
 EXERCICE 2 :
 Parcours l'objet fruit pour afficher chacune de ses propriétés avec, pour chacune, sa valeur
 */
-const fruits = {
+const fruit = {
   "Nom": "Pomme",
   "Prix": 0.3,
   "Couleur": "Verte",
@@ -43,11 +37,8 @@ const fruits = {
 };
 
 // Écris ton code ici
-//boucle forin pour voir tous les propreiters
-//const toto = [] tableaux indice car il n'y a pas di'ndi
-console.log('forin')
-for (const fruitKey in fruits) {
-  console.log(` le  ${fruitKey} = ${fruits[fruitKey]}`)
+for (const fruitKey in fruit) {
+  console.log(` le  ${fruitKey} = ${fruit[fruitKey]}`)
 
 }
 // Un mot est un objet de type String => ceci fonctionne également…
