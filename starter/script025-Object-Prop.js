@@ -16,6 +16,8 @@ const moi = {
     nationalite: 'belges'
 };
 
+
+
 // Affiche l'objet que tu viens de créer dans la console
 console.log(moi);
 
@@ -70,3 +72,24 @@ stylo.couleur = 'rouge';
 console.log(`J'écris avec un stylo ${stylo.type} ${stylo.couleur} de marque ${stylo.marque}`);
 stylo.prix = 2.5;
 console.log(`Mon stylo coûte ${stylo.prix} euros`);
+
+class Stylo {
+    type;
+    couleur;
+    marque;
+
+    decrire(){
+        console.log(`J'écris avec un stylo ${stylo.type} ${stylo.couleur} de marque ${stylo.marque}`);
+
+    }
+}
+const Stylo2 = new Stylo();
+Stylo2.type = 'bille';
+Stylo2.couleur = 'bleux';
+Stylo2.marque = 'bic';
+Stylo2.decrire();
+Stylo2.couleur = 'rouge';
+Stylo2.decrire();
+Stylo2.prix = 2.5;
+console.log(`Mon stylo coûte ${stylo.prix} euros`);
+console.log(Stylo2);

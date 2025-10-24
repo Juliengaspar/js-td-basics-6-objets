@@ -26,3 +26,27 @@ console.log(compteBancaire.decrire());
 compteBancaire.crediter(250);
 compteBancaire.crediter(-80);
 console.log(compteBancaire.decrire());
+
+console.log("avec une class")
+
+class CompteBancaireClasse {
+    titulaire;
+    solde;
+
+
+    constructor(titulaire, solde) {
+        this.titulaire = titulaire;
+        this.solde = solde;
+    }
+    crediter2(monatantPasse){
+        this.solde +=  monatantPasse;
+    }
+    decrire2(){
+        console.log(`${this.titulaire} a pour solde ${this.solde}!`);
+    }
+}
+const CompteBancaireUser = new CompteBancaireClasse();
+CompteBancaireUser.titulaire = 'Alex';
+CompteBancaireUser.solde = 1000;
+CompteBancaireUser.crediter2(250);
+CompteBancaireUser.decrire2();

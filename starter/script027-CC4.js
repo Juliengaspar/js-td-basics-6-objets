@@ -53,3 +53,39 @@ const bmi={
 
 bmi.init();
 
+class Bmi {
+    nom;
+    poids ;
+    taille;
+    bmi
+
+
+    constructor(nom, poids, taille,bmi) {
+        this.nom = nom;
+        this.poids = poids;
+        this.taille = taille;
+        this.bmi = bmi;
+    }
+
+    calculeBMI(){
+        return this.poids / (this.taille * this.taille);
+    }
+}
+const BmiJohn = new Bmi();
+const BmiMark = new Bmi();
+
+BmiMark.nom = "Mark";
+BmiJohn.nom = "John";
+BmiJohn.poids =  parseInt(prompt('entrez le poids de John en KG'));
+BmiJohn.taille = parseInt(prompt('entrez la taille de John en M'));
+BmiMark.poids  = parseInt(prompt('entrez le poids de Mark en KG'));
+BmiMark.taille= parseInt(prompt('entrez la taille de Mark en M'));
+BmiJohn.bmi= BmiJohn.poids / (BmiJohn.taille * BmiJohn.taille);
+BmiMark.bmi= BmiMark.poids / (BmiMark.taille * BmiMark.taille);
+if (BmiJohn.bmi > BmiMark.bmi) {
+    console.log(`Le BMI de ${BmiJohn.nom} (${BmiJohn.bmi}) est supérieur à celui de ${BmiMark.nom} (${BmiJohn.bmi}).`);
+} else if (BmiJohn.bmi === BmiMark.bmi) {
+    console.log(`Le BMI de ${BmiJohn.nom} et de ${BmiMark.nom} sont égaux (${BmiJohn.bmi(2)}).`);
+} else {
+    console.log(`Le BMI de ${BmiMark.nom} (${BmiMark.bmi}) est supérieur à celui de ${BmiJohn.nom} (${BmiJohn.bmi}).`);
+}

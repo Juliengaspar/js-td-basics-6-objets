@@ -26,6 +26,7 @@ const chien = {
 }
 
  */
+/*
 function createDog(nom, race, couleur) {
             return {//return un obj
                 nom: nom,
@@ -51,6 +52,8 @@ console.table(chiens);
 console.table(chien.grogner());
 console.table(chien.aboyer());
 
+ */
+
 class Chien {
     nom;//propreiter de la classe
     race;//propreiter de la classe
@@ -74,3 +77,5 @@ class Chien {
     }
 
 }
+const chien = new Chien('Tobby', 'Border Collie', 'bleu');//on instancier un nouveaux obj
+chien.aboyer();

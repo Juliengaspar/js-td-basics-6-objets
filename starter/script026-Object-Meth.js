@@ -89,3 +89,22 @@ Les objets et la manière de les utiliser se trouvent dans la DOCUMENTATION
 Par exemple, pour l'objet Array :
 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array
 */
+console.log("ex avec classe")
+class Surface {
+    longeur;
+    largeur;
+
+    constructor(longeur, largeur) {
+        this.longeur = longeur;
+        this.largeur = largeur;
+    }
+
+    calculeSurface(){
+        return this.longeur * this.largeur;
+    }
+}
+const surface = new Surface();
+surface.longeur = 5;
+surface.largeur = 5;
+console.log(surface);
+console.log(surface.calculeSurface());

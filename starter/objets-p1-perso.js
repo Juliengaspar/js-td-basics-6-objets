@@ -54,3 +54,30 @@ console.log(aurora.decrire());
 console.log("Aurora trouve un bracelet de force");
 aurora.force -=  10;
 console.log(aurora.decrire());
+
+
+//class
+console.log("avec une classe")
+class Perso  {
+  nom;
+  sante;
+  force;
+  xp;
+
+  constructor(nom, sante, force, xp) {
+    this.nom = nom;
+    this.sante = sante;
+    this.force = force;
+    this.xp = xp;
+  }
+  decrire2(){
+    console.log(`${this.nom} a ${this.sante} points de vie, ${this.force} en force et ${this.xp} points d'expérience`);
+  }
+}
+const Aurora2 = new Perso();
+Aurora2.nom = 'Aurora';
+Aurora2.sante = 100;
+Aurora2.sante = 1000;
+Aurora2.force = 1000;
+Aurora2.xp = 1000;
+Aurora2.decrire2();
